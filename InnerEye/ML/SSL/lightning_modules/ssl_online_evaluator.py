@@ -155,5 +155,5 @@ class SSLOnlineEvaluatorInnerEye(SSLOnlineEvaluator):
 
             # log metrics
             # log_on_epoch(pl_module, 'ssl_online_evaluator/train/loss', loss)
-            for metric in self.train_metrics:
-                log_on_epoch(pl_module, f"ssl_online_evaluator/train/online_{metric.name}", metric)
+            # for metric in self.train_metrics:
+            #     log_on_epoch(pl_module, f"ssl_online_evaluator/train/online_{metric.name}", metric)
