@@ -101,13 +101,13 @@ class BYOLInnerEye(pl.LightningModule):
 
     def training_step(self, batch: BatchType, batch_idx: int, **kwargs: Any) -> torch.Tensor:  # type: ignore
         loss = self.shared_step(batch, batch_idx)
-        log_on_epoch(self, metrics={'byol/train/loss': loss, 'byol/tau': self.weight_callback.current_tau})
+        # log_on_epoch(self, metrics={'byol/train/loss': loss, 'byol/tau': self.weight_callback.current_tau})
         # log_learning_rate(self, name="byol/learning_rate")
         return loss
 
     def validation_step(self, batch: BatchType, batch_idx: int, **kwargs: Any) -> T:  # type: ignore
         loss = self.shared_step(batch, batch_idx)
-        log_on_epoch(self, 'byol/val/loss', loss)
+        # log_on_epoch(self, 'byol/val/loss', loss)
         return loss
 
     def setup(self, *args: Any, **kwargs: Any) -> None:
