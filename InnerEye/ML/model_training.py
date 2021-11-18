@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple, TypeVar
 
 from health_azure.utils import is_global_rank_zero, is_local_rank_zero
-from health_ml.utils import AzureMLLogger, AzureMLProgressBar, BatchTimeCallback, log_on_epoch
+from health_ml.utils import AzureMLLogger, AzureMLProgressBar, log_on_epoch
 from pytorch_lightning import Callback, LightningModule, Trainer, seed_everything
 from pytorch_lightning.callbacks import GPUStatsMonitor, ModelCheckpoint, TQDMProgressBar
 from pytorch_lightning.loggers import TensorBoardLogger
